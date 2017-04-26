@@ -7,7 +7,7 @@ import xlwt
 import xlrd
 import datetime
 
-#@python_2_unicode_compatible
+@python_2_unicode_compatible
 class User(models.Model):
     BEGINNER = 'beginner'
     NOVICE= 'novice'

@@ -92,9 +92,8 @@ class User(models.Model):
                     sheet.write(i, index, value)
             except TypeError:
                 pass
-	
-        #also how do you do this
-        output = self.username + str(myProg) + str(datetime.date.today()) + '.xls'
+	    phase=myprog[0:6]
+        output = self.username + '_' + str(phase) + '_' + str(datetime.date.today()) + '.xls'
 	
         workbook.save('/home/stu/cadet08/x86249/IT394/WAS/weightandsee/was/workouts/'+output)
         
