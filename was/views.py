@@ -15,14 +15,14 @@ def register(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
         form.save()
+        user=User()
+        mostRecent=user.mostRecentUser()
+        mostRecent.excel()
         return HttpResponseRedirect('/was/submitted')
     else:
         form=RegisterForm().as_p()
     return render(request, 'register.html',{'form': form})
 
 def submitted(request):
-    user=User()
-    user.excel()
     template = loader.get_template('submitted.html')
-    #return HttpResponse(template.render(request))
     return render(request, 'submitted.html')

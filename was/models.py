@@ -41,9 +41,19 @@ class User(models.Model):
         l.append(self.gender)
         l.append(self.bodyWeight)
         l.append(self.userLevel)
+        l.append(self.squatMax)
+        l.append(self.benchMax)
+        l.append(self.deadliftMax)
+        l.append(self.snatchMax)
+        l.append(self.cleanMax)
         l.append(self.goals)
         return str(l)
     
+    def mostRecentUser(self):
+        users = list(User.objects.all())
+        mostRecentUser = users[len(users)-1]
+        return mostRecentUser #user object
+        
     def excel(self):
         levelProg = {'beginner': 'phase0.xls', 'novice':'phase1.xls', 'intermediate':'phase2.xls', 'advanced':'phase3.xls'}
         myProg = levelProg[self.userLevel] ####how do you call user level
@@ -82,9 +92,8 @@ class User(models.Model):
                     sheet.write(i, index, value)
             except TypeError:
                 pass
-	
-        #also how do you do this
-        output = self.username + str(datetime.date.today()) + '.xls'
+	    phase=myprog[0:6]
+        output = self.username + '_' + str(phase) + '_' + str(datetime.date.today()) + '.xls'
 	
         workbook.save('/home/stu/cadet08/x86249/IT394/WAS/weightandsee/was/workouts/'+output)
         
