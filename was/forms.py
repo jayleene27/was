@@ -11,6 +11,7 @@ class RegisterForm(ModelForm):
         'age',
         'gender',
         'bodyWeight',
+        'userLevel',
         'squatMax',
         'benchMax',
         'deadliftMax',
