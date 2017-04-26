@@ -26,7 +26,6 @@ SECRET_KEY = 'qisk&zfp%aw(@u1-yh-0w8rpp*l&)v8u%ous*-!i45ww@@8qsc'
 DEBUG = True
 
 ALLOWED_HOSTS = ['it394weightandsee.herokuapp.com',
-            localhost,
 ]
 
 
