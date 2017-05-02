@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from was.models import User, Exercises
+from was.models import User
 
 from django import forms
 
@@ -11,12 +11,9 @@ class RegisterForm(ModelForm):
         'age',
         'gender',
         'bodyWeight',
-        'userLevel',
         'squatMax',
         'benchMax',
         'deadliftMax',
-        'snatchMax',
-        'cleanMax',
-        'goals']
+         ]
         
 

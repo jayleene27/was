@@ -17,7 +17,8 @@ def register(request):
         form.save()
         user=User()
         mostRecent=user.mostRecentUser()
-        mostRecent.excel()
+        mostRecent.userLevel=mostRecent.levelPicker(mostRecent.bodyWeight,mostRecent.gender)
+        mostRecent.excel(mostRecent.userLevel)
         return HttpResponseRedirect('/was/submitted')
     else:
         form=RegisterForm().as_p()
