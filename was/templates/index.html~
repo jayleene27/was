@@ -19,6 +19,7 @@
 <h1 class="auto-style1">Welcome to Weight and See!</h1>
 <h4 class="auto-style1">The only weightlifting app endorsed by the Army Powerlifting Team!</h4>
 <center><img src="{% static 'images/armyteam.JPG' %}" alt="was" height="300"></center>
+<p> </p>
 <center><form method="get" action="/was/register">
     <button type="submit">Get started</button>
 </form></center>

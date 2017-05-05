@@ -17,12 +17,16 @@
 <body>
 <form action="" method="post">
 <h1 class="auto-style1">Weight and See</h1>
-<h2 class="auto-style1">"Get Swole or Die Trying"</h1>
+<h2 class="auto-style1">"Get Swole or Die Trying"</h2>
+<h3>*All weights must be in pounds*</h3>
 <!---<p class="auto-style1">Username: <input id="username" name="username" type="text" value="{{userid}}"/>--->
 {% csrf_token %}
 {{ form }}
 <input type="submit" value="Submit">
 </form>
+<h5>Helpful Links</h5>
+<p><a href="http://www.metric-conversions.org/weight/kilograms-to-pounds.htm">Convert pounds to kilograms</a></p>
+<p><a href="http://www.allthingsgym.com/rep-max-calculator/">Calculate your one-rep max</a></p>
 </body>
 
 </html>

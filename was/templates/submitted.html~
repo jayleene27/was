@@ -18,7 +18,12 @@
 <body>
 <h1 class="auto-style1">Submitted!</h1>
 <h3 class="auto-style1">You're on your way to lifting like a champ</h3>
-<p class="auto-style1">Please check your WAS folder for the .xls workout plan with your name, phase, and today's date.</p>
+<p class="auto-style1">Please check your computer's <b>workouts</b> subfolder under the <b>WAS</b> folder for the .xls workout plan with your name, phase, and today's date.</p>
+<center><img src="{% static 'images/directory.png' %}" alt="was" height="300"></center>
+<p> </p>
+<center><form method="get" action="/was/register">
+    <button type="submit">Create Another Workout</button>
+</form></center>
 <a>
 </a>
 </body>
